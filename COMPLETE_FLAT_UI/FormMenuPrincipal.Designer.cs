@@ -33,6 +33,7 @@
             this.panelContenedorPrincipal = new System.Windows.Forms.Panel();
             this.panelContenedorForm = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,7 +66,7 @@
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
             this.Iniciar_socket = new System.Windows.Forms.Timer(this.components);
             this.UDP_read = new System.Windows.Forms.Timer(this.components);
-            this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelContenedorPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -106,6 +107,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(61)))), ((int)(((byte)(69)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label2);
@@ -121,12 +123,24 @@
             this.panel1.Size = new System.Drawing.Size(789, 100);
             this.panel1.TabIndex = 5;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
+            this.label6.Location = new System.Drawing.Point(199, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Telemetria:";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(202, 50);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(253, 20);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -139,7 +153,6 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightGray;
             this.label5.Location = new System.Drawing.Point(83, 54);
@@ -150,7 +163,6 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightGray;
             this.label4.Location = new System.Drawing.Point(83, 36);
@@ -493,16 +505,15 @@
             this.UDP_read.Interval = 1000;
             this.UDP_read.Tick += new System.EventHandler(this.UDP_read_Tick);
             // 
-            // label6
+            // button2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(199, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 16);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Telemetria:";
+            this.button2.Location = new System.Drawing.Point(200, 76);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormMenuPrincipal
             // 
@@ -575,6 +586,7 @@
         private System.Windows.Forms.Timer UDP_read;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button2;
     }
 }
 
